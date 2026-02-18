@@ -16,7 +16,7 @@ export default function MuslimProDashboard() {
     const { bookmark, mounted } = useLastRead();
     const [prayerData, setPrayerData] = useState<PrayerData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [city, setCity] = useState("Yogyakarta");
+    const [city, setCity] = useState("Surabaya");
     const [country, setCountry] = useState("Indonesia");
     const [coords, setCoords] = useState<{ lat: number; long: number } | null>({ lat: -7.7956, long: 110.3695 });
 
@@ -153,11 +153,11 @@ export default function MuslimProDashboard() {
     if (!prayerData) return <div>Failed to load</div>;
 
     const features = [
-        { name: "Quran", icon: BookOpen, href: "/quran" },
-        { name: "Dua", icon: MessageSquare, href: "/dua" },
+        { name: "Qur'an", icon: BookOpen, href: "/qur'an" },
+        { name: "DOa", icon: MessageSquare, href: "/doa" },
         { name: "Tasbih", icon: MoreHorizontal, href: "/tasbih" },
-        { name: "Qibla", icon: Compass, href: "/qibla" },
-        { name: "Hadith", icon: BookOpen, href: "/hadith" },
+        { name: "Qiblat", icon: Compass, href: "/qiblat" },
+        { name: "Hadist", icon: BookOpen, href: "/hadist" },
     ];
 
     return (
