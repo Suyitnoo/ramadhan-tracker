@@ -12,7 +12,7 @@ import { Loader2, MapPin } from "lucide-react";
 export default function DashboardLayout() {
     const [prayerData, setPrayerData] = useState<PrayerData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [city, setCity] = useState("Jakarta");
+    const [city, setCity] = useState("Surabaya");
     const [country, setCountry] = useState("Indonesia");
 
     // State for time tracking
@@ -43,7 +43,7 @@ export default function DashboardLayout() {
             const timings = prayerData.timings;
             const prayerList = [
                 { name: "Fajr", time: timings.Fajr },
-                { name: "Dhuhr", time: timings.Dhuhr },
+                { name: "Dhuhur", time: timings.Dhuhur },
                 { name: "Asr", time: timings.Asr },
                 { name: "Maghrib", time: timings.Maghrib },
                 { name: "Isha", time: timings.Isha },
