@@ -11,7 +11,7 @@ import Countdown from "./Countdown";
 export default function PrayerTimesDisplay() {
     const [prayerData, setPrayerData] = useState<PrayerData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [city, setCity] = useState("Jakarta"); // Default for now
+    const [city, setCity] = useState("Surabaya"); // Default for now
     const [country, setCountry] = useState("Indonesia");
     const [nextPrayer, setNextPrayer] = useState<{ name: string; time: string } | null>(null);
 
