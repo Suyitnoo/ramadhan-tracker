@@ -77,7 +77,7 @@ export default function ProfilePage() {
                     </div>
                     <div>
                         <h2 className="text-xl font-bold">Ramadan User</h2>
-                        <p className="text-sm text-slate-500">Yogyakarta, Indonesia</p>
+                        <p className="text-sm text-slate-500">Surabaya, Indonesia</p>
                     </div>
                 </div>
 
