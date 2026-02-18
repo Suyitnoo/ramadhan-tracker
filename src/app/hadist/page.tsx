@@ -61,7 +61,7 @@ const HADITHS = [
 
 const CATEGORIES = ["All", "Ramadan", "Virtues", "Laylatul Qadr", "Sunnah"];
 
-export default function HadithPage() {
+export default function HadistPage() {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
