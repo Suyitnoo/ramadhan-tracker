@@ -10,7 +10,7 @@ export default function BottomNav() {
     const navItems = [
         { label: "Home", icon: Home, href: "/" },
         { label: "Quran", icon: BookOpen, href: "/quran" },
-        { label: "Qibla", icon: Compass, href: "/qibla" },
+        { label: "Qiblat", icon: Compass, href: "/qiblat" },
     ];
 
     return (
