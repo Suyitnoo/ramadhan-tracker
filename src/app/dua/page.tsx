@@ -72,7 +72,7 @@ export default function DoaPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const filteredDuas = DOAS.filter(doa => {
+    const filteredDoas = DOAS.filter(doa => {
         const matchesSearch = doa.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             doa.translation.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesCategory = activeCategory === "All" || dua.category === activeCategory;
@@ -135,7 +135,7 @@ export default function DoaPage() {
                                             </div>
                                             <div>
                                                 <h3 className="font-bold text-slate-800">{doa.title}</h3>
-                                                <span className="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{dua.category}</span>
+                                                <span className="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{doa.category}</span>
                                             </div>
                                         </div>
                                         <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full">
