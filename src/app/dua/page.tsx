@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
-const DUAS = [
+const DOAS = [
     {
         id: 1,
         title: "Iftar Doa",
@@ -134,7 +134,7 @@ export default function DoaPage() {
                                                 <span className="font-amiri text-lg">🤲</span>
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-slate-800">{dua.title}</h3>
+                                                <h3 className="font-bold text-slate-800">{doa.title}</h3>
                                                 <span className="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{dua.category}</span>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@ export default function DoaPage() {
 
                                     <div className="space-y-4 text-center py-2">
                                         <p className="font-amiri text-2xl text-slate-800 leading-loose" dir="rtl">
-                                            {dua.arabic}
+                                            {doa.arabic}
                                         </p>
 
                                         <div className="space-y-1">
