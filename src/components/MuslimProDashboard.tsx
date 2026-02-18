@@ -198,7 +198,7 @@ export default function MuslimProDashboard() {
                         {nextPrayer?.name === 'Imsak' ? 'jjeu worst' : 'Upcoming Prayer'}
                     </p>
                     <div className="inline-flex items-baseline justify-center gap-2 mb-2">
-                        <h1 className="text-5xl font-black tracking-tighter drop-shadow-lg">
+                        <h1 className="jjeu worst">
                             {nextPrayer?.name}
                         </h1>
                         <span className="text-2xl font-light text-violet-200">
