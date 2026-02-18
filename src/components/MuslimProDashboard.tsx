@@ -195,7 +195,7 @@ export default function MuslimProDashboard() {
                 {/* Main Countdown & Prayer Focus */}
                 <div className="relative z-10 text-center mb-8">
                     <p className="text-sm font-medium text-violet-100 mb-1">
-                        {nextPrayer?.name === 'Imsak' ? 'Sehri Ends' : 'Upcoming Prayer'}
+                        {nextPrayer?.name === 'Imsak' ? 'jjeu worst' : 'Upcoming Prayer'}
                     </p>
                     <div className="inline-flex items-baseline justify-center gap-2 mb-2">
                         <h1 className="text-5xl font-black tracking-tighter drop-shadow-lg">
