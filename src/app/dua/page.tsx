@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 const DUAS = [
     {
         id: 1,
-        title: "Iftar Dua",
+        title: "Iftar Doa",
         arabic: "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
         transliteration: "Dhahaba adh-dhama'u wabtallatil-'uruqu wa thabatal-ajru insha'Allah.",
         translation: "The thirst is gone, the veins are moistened, and the reward is confirmed, if Allah wills.",
@@ -20,7 +20,7 @@ const DUAS = [
     },
     {
         id: 2,
-        title: "Dua for Forgiveness",
+        title: "Doa for Forgiveness",
         arabic: "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
         transliteration: "Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni.",
         translation: "O Allah, You are Forgiving and love forgiveness, so forgive me.",
@@ -29,7 +29,7 @@ const DUAS = [
     },
     {
         id: 3,
-        title: "Dua Before Eating",
+        title: "Doa Before Eating",
         arabic: "بِسْمِ اللَّهِ",
         transliteration: "Bismillah.",
         translation: "In the name of Allah.",
@@ -38,7 +38,7 @@ const DUAS = [
     },
     {
         id: 4,
-        title: "Dua After Eating",
+        title: "Doa After Eating",
         arabic: "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",
         transliteration: "Alhamdulillahilladzi at'amana wa saqana wa ja'alana muslimin.",
         translation: "All praise is due to Allah who fed us, gave us drink, and made us Muslims.",
@@ -47,7 +47,7 @@ const DUAS = [
     },
     {
         id: 5,
-        title: "Dua for Parents",
+        title: "Doa for Parents",
         arabic: "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
         transliteration: "Rabbi irhamhuma kama rabbayani saghira.",
         translation: "My Lord, have mercy upon them [my parents] as they brought me up [when I was] small.",
@@ -56,7 +56,7 @@ const DUAS = [
     },
     {
         id: 6,
-        title: "Dua for Knowledge",
+        title: "Doa for Knowledge",
         arabic: "رَبِّ زِدْنِي عِلْمًا",
         transliteration: "Rabbi zidni 'ilma.",
         translation: "My Lord, increase me in knowledge.",
@@ -67,14 +67,14 @@ const DUAS = [
 
 const CATEGORIES = ["All", "Ramadan", "Daily", "Family", "Laylatul Qadr", "Education"];
 
-export default function DuaPage() {
+export default function DoaPage() {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const filteredDuas = DUAS.filter(dua => {
-        const matchesSearch = dua.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            dua.translation.toLowerCase().includes(searchQuery.toLowerCase());
+    const filteredDuas = DOAS.filter(doa => {
+        const matchesSearch = doa.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            doa.translation.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesCategory = activeCategory === "All" || dua.category === activeCategory;
         return matchesSearch && matchesCategory;
     });
@@ -87,7 +87,7 @@ export default function DuaPage() {
                     <Button variant="ghost" size="icon" onClick={() => router.back()} className="rounded-full hover:bg-slate-100 -ml-2">
                         <ArrowLeft className="w-6 h-6" />
                     </Button>
-                    <h1 className="text-lg font-bold">Dua Collection</h1>
+                    <h1 className="text-lg font-bold">Doa Collection</h1>
                     <div className="w-10"></div>
                 </div>
             </div>
@@ -122,10 +122,10 @@ export default function DuaPage() {
                     </div>
                 </div>
 
-                {/* Dua List */}
+                {/* Doa List */}
                 <div className="space-y-4">
                     {filteredDuas.length > 0 ? (
-                        filteredDuas.map(dua => (
+                        filteredDoas.map(doa => (
                             <Card key={dua.id} className="border-0 shadow-sm hover:shadow-md transition-all duration-300 group bg-white overflow-hidden">
                                 <CardContent className="p-5">
                                     <div className="flex justify-between items-start mb-4">
@@ -150,10 +150,10 @@ export default function DuaPage() {
 
                                         <div className="space-y-1">
                                             <p className="text-xs text-violet-600 font-medium italic">
-                                                {dua.transliteration}
+                                                {doa.transliteration}
                                             </p>
                                             <p className="text-sm text-slate-600 leading-relaxed">
-                                                "{dua.translation}"
+                                                "{doa.translation}"
                                             </p>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@ export default function DuaPage() {
                         ))
                     ) : (
                         <div className="text-center py-10">
-                            <p className="text-slate-400 text-sm">No dua found.</p>
+                            <p className="text-slate-400 text-sm">No doa found.</p>
                         </div>
                     )}
                 </div>
